@@ -1,0 +1,30 @@
+---
+import Experienceitem from './Experienceitem.astro';
+
+const experience = [
+  {
+    title: 'Software Engineer',
+    company: 'Nuawi Technologies',
+    date: 'Dec 2023 - Sep 2024',
+    description:
+      'Responsible for the components and utilities for the creation and development of web applications. Improved software delivery times by 30%. Implemented unit tests to validate critical functionalities, detect errors early, and maintain high development standards.',
+  },
+  {
+    title: 'Fullstack Developer',
+    company: 'Make It Real',
+    date: 'Jun 2023 - Nov 2023',
+    description:
+      'Launched an e-commerce for restaurants in 10 weeks, enabling online reservations, orders, and payments. Migrated a legacy codebase for an animal foundations project to more modern technologies within two weeks and developed new functionalities.',
+  },
+];
+---
+
+<ol class='relative mt-16'>
+  {
+    experience.map((exp) => (
+      <li>
+        <Experienceitem {...exp} />
+      </li>
+    ))
+  }
+</ol>

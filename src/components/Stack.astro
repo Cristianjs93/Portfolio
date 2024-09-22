@@ -1,0 +1,88 @@
+---
+import NodeJS from './icons/NodeJS.astro';
+import Html from './icons/Html.astro';
+import Css from './icons/Css.astro';
+import Javascript from './icons/Javascript.astro';
+import Typescript from './icons/Typescript.astro';
+import Python from './icons/Python.astro';
+import React from './icons/React.astro';
+import NextJS from './icons/NextJS.astro';
+import Express from './icons/Express.astro';
+import AstroIcon from './icons/AstroIcon.astro';
+import NestJS from './icons/NestJS.astro';
+import Django from './icons/Django.astro';
+import PostgreSQL from './icons/PostgreSQL.astro';
+import MongoDB from './icons/MongoDB.astro';
+import Prisma from './icons/Prisma.astro';
+import TypeORM from './icons/TypeORM.astro';
+import Redux from './icons/Redux.astro';
+import Sass from './icons/Sass.astro';
+import Tailwind from './icons/Tailwind.astro';
+import Git from './icons/Git.astro';
+import GitHub from './icons/GitHub.astro';
+import Docker from './icons/Docker.astro';
+import Aws from './icons/Aws.astro';
+import Jest from './icons/Jest.astro';
+
+const stack = [
+  { icon: NodeJS },
+  { icon: Html },
+  { icon: Css },
+  { icon: Javascript },
+  { icon: Typescript },
+  { icon: Python },
+  { icon: React },
+  { icon: NextJS },
+  { icon: AstroIcon },
+  { icon: Express, class: 'fill-black dark:fill-white' },
+  { icon: NestJS },
+  { icon: Django },
+  { icon: PostgreSQL },
+  { icon: MongoDB },
+  { icon: Prisma, class: 'fill-black dark:fill-white' },
+  { icon: TypeORM },
+  { icon: Redux },
+  { icon: Sass },
+  { icon: Tailwind },
+  { icon: Git },
+  { icon: GitHub },
+  { icon: Docker },
+  { icon: Aws, class: 'fill-[#252f3e] dark:fill-white' },
+  { icon: Jest },
+];
+---
+
+<div
+  class='carousel relative flex justify-start items-center gap-10 pt-4 overflow-hidden before:left-0 after:right-0 before:bg-gradient-to-l
+  from-[#ffffff00] to-white dark:to-[#030712] after:bg-gradient-to-r after:from-[#ffffff00] after:to-white dark:after:to-[#030712]'
+>
+  <div class='track flex gap-10 animate-[slide_30s_linear_infinite]'>
+    {stack.map((stk) => <stk.icon class={`size-12 ${stk.class}`} />)}
+  </div>
+  <div class='track flex gap-10 animate-[slide_30s_linear_infinite]'>
+    {stack.map((stk) => <stk.icon class={`size-12 ${stk.class}`} />)}
+  </div>
+</div>
+
+<style>
+  .carousel:before,
+  .carousel:after {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    content: '';
+    z-index: 2;
+  }
+  .carousel:hover .track {
+    animation-play-state: paused;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-102%);
+    }
+  }
+</style>

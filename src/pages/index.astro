@@ -1,0 +1,50 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SectionContainer from '@/components/SectionContainer.astro';
+import Hero from '@/components/Hero.astro';
+import TitleSection from '@/components/TitleSection.astro';
+import Experience from '@/components/Experience.astro';
+import Briefcase from '@/components/icons/Briefcase.astro';
+import CodeIcon from '@/components/icons/Code.astro';
+import Projects from '@/components/Projects.astro';
+import ProfileCheck from '@/components/icons/ProfileCheck.astro';
+import About from '@/components/About.astro';
+import Stack from '@/components/Stack.astro';
+import UpButton from '@/components/UpButton.astro';
+---
+
+<Layout
+  title='Portfolio - Cristian Jimenez'
+  description='Juntos crearemos experiencias de usuario únicas! 🚀'
+>
+  <main class='px-4'>
+    <SectionContainer id='me' class='py-16 md:py-32'>
+      <Hero />
+    </SectionContainer>
+    <div class='space-y-24'>
+      <SectionContainer id='experience'>
+        <TitleSection>
+          <Briefcase class='size-8' />
+          Work experience
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
+      <SectionContainer id='projects'>
+        <TitleSection>
+          <CodeIcon class='size-8' />
+          Projects
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
+      <SectionContainer id='about'>
+        <TitleSection>
+          <ProfileCheck class='size-8' />
+          About me
+        </TitleSection>
+        <About />
+        <Stack />
+      </SectionContainer>
+    </div>
+  </main>
+  <UpButton />
+</Layout>
