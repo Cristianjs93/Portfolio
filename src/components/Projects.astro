@@ -1,19 +1,17 @@
 ---
 import React from './icons/React.astro';
 import NextJS from './icons/NextJS.astro';
+import Sass from './icons/Sass.astro';
+import Redux from './icons/Redux.astro';
 import Express from './icons/Express.astro';
 import NestJS from './icons/NestJS.astro';
 import PostgreSQL from './icons/PostgreSQL.astro';
 import MongoDB from './icons/MongoDB.astro';
-import Redux from './icons/Redux.astro';
-import Aws from './icons/Aws.astro';
-import GitHub from './icons/GitMinimal.astro';
-import LinkButton from './LinkButton.astro';
-import Link from './icons/Link.astro';
-import Sass from './icons/Sass.astro';
 import Prisma from './icons/Prisma.astro';
 import TypeORM from './icons/TypeORM.astro';
 import Jest from './icons/Jest.astro';
+import Aws from './icons/Aws.astro';
+import ProjectsItem from './ProjectsItem.astro';
 
 const tags = {
   REACT: {
@@ -77,6 +75,7 @@ const tags = {
     icon: Aws,
   },
 };
+
 const projects = [
   {
     title: 'Emprendegan',
@@ -144,56 +143,5 @@ const projects = [
 ---
 
 <div class='flex flex-col gap-y-16'>
-  {
-    projects.map(({ image, title, description, tags, link, github }) => (
-      <article class='flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0'>
-        <div class='w-full md:w-1/2 md:h-56 lg:h-[300px] rounded-xl shadow-xl transition duration-500 ease-in-out transform md:group-hover:-translate-y-1 md:group-hover:shadow-2xl overflow-clip border lg:border-gray-300 lg:hover:border-gray-200 lg:dark:border-gray-900 lg:dark:hover:border-gray-800'>
-          <img
-            src={image}
-            alt='Project photo'
-            class='w-full h-full rounded-xl transition duration-500 md:scale-110 border md:group-hover:scale-105'
-            loading='lazy'
-          />
-        </div>
-
-        <div class='w-full md:w-1/2 md:max-w-lg'>
-          <h3 class='text-2xl font-bold text-gray-800 dark:text-gray-100'>
-            {title}
-          </h3>
-          <div class='flex flex-wrap mt-2'>
-            <ul class='flex flex-row mb-2 gap-2 flex-wrap'>
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 shadow-md border-[1px]`}
-                  >
-                    <tag.icon class='size-4' />
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <div class='mt-2 text-pretty text-gray-700 dark:text-gray-400'>
-              {description}
-            </div>
-            <footer class='flex items-end justify-start mt-4 gap-x-4'>
-              {github && (
-                <LinkButton href={github}>
-                  <GitHub class='size-6' />
-                  Code
-                </LinkButton>
-              )}
-              {link && (
-                <LinkButton href={link}>
-                  <Link class='size-4' />
-                  Preview
-                </LinkButton>
-              )}
-            </footer>
-          </div>
-        </div>
-      </article>
-    ))
-  }
+  {projects.map((project) => <ProjectsItem {...project} />)}
 </div>

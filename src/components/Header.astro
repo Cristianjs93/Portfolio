@@ -54,7 +54,7 @@ const navItems = [
   }
 
   nav {
-    @apply dark:bg-gray-800/90 bg-white/50;
+    @apply dark:bg-gray-800/80 bg-white/50;
   }
 
   @keyframes nav-shadown {
@@ -96,7 +96,6 @@ const navItems = [
       observer.observe(section);
     });
 
-    // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === 'hidden') {
         observer.disconnect();
