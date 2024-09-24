@@ -13,10 +13,11 @@ import MailIcon from '@/components/icons/Mail.astro';
       alt='Cristian photo'
     />
     <a
+      class='flex items-center transition md:justify-center md:hover:scale-105'
       href='https://www.linkedin.com/in/cristian-jimenez-sanchez-052819103/'
       target='_blank'
       rel='noopener'
-      class='flex items-center transition md:justify-center md:hover:scale-105'
+      aria-label='LinkedIn profile'
     >
       <Badge>Open to work</Badge>
     </a>
@@ -36,11 +37,14 @@ import MailIcon from '@/components/icons/Mail.astro';
   guidelines for creating maintainable, extensible and clean code.
 </p>
 <nav class='flex flex-wrap gap-4 mt-5'>
-  <SocialPill href='mailto:cristian.jimenezsa@hotmail.com'>
+  <SocialPill href='mailto:cristian.jimenezsa@hotmail.com' aria-label='Mail'>
     <MailIcon class='size-4' />
     Contact
   </SocialPill>
-  <SocialPill href='https://linkedin.com/in/cristian-jimenez-sanchez-052819103'>
+  <SocialPill
+    href='https://linkedin.com/in/cristian-jimenez-sanchez-052819103'
+    aria-label='LinkedIn profile'
+  >
     <LinkedInIcon class='size-4' />
     LinkedIn
   </SocialPill>
