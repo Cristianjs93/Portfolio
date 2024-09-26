@@ -10,7 +10,7 @@ import Hamburger from './icons/Hamburger.astro';
     class='flex justify-between sm:justify-center items-center sm:gap-6 lg:gap-12 w-11/12 mx-auto py-2 px-4 sm:max-w-xl lg:max-w-[695px] rounded-full nav-container'
   >
     <nav class='flex'>
-      <label class='z-50 sm:hidden' for='hamburger-menu'>
+      <label class='cursor-pointer z-50 sm:hidden' for='hamburger-menu'>
         <Hamburger class='size-7' />
       </label>
       <input
@@ -19,11 +19,12 @@ import Hamburger from './icons/Hamburger.astro';
         type='checkbox'
       />
       <ul
-        class='fixed sm:static top-[-8px] left-0 w-screen h-0 peer-checked:h-screen sm:w-auto sm:h-auto overflow-hidden flex flex-col sm:flex-row justify-center items-center gap-6 lg:gap-12 bg-white/95 dark:bg-gray-900/95 sm:bg-inherit transition-all z-40'
+        class='fixed sm:static top-[-8px] left-0 w-screen h-0 peer-checked:h-screen sm:w-auto sm:h-auto overflow-hidden flex flex-col sm:flex-row justify-center items-center gap-6 lg:gap-12 bg-white/95 dark:bg-gray-900/95 sm:bg-transparent sm:dark:bg-transparent transition-all z-40'
       >
         {
           navItems.map((link) => (
-            <li class='text-xl sm:text-sm lg:text-md font-medium text-gray-600 dark:text-gray-200'>
+            <li class='inline-flex items-center gap-2 w-36 sm:w-auto text-xl sm:text-sm lg:text-md font-medium text-gray-600 dark:text-gray-200'>
+              <link.icon class='size-5 sm:hidden' />
               <a
                 id={link.url}
                 class='transition hover:text-blue-500'
@@ -64,34 +65,32 @@ import Hamburger from './icons/Hamburger.astro';
   }
 </style>
 
-<script>
+<script is:inline>
   const navItems = document.querySelectorAll('header nav a');
-  const hamburgerMenu = document.getElementById(
-    'hamburger-menu'
-  ) as HTMLInputElement;
+  const hamburgerMenu = document.getElementById('hamburger-menu');
 
   navItems.forEach((item) => {
     item.addEventListener('click', (event) => {
       event.preventDefault();
-      const anchor = event.target as HTMLAnchorElement;
+      const anchor = event.target;
       if (anchor.href.startsWith('mailto:')) {
         window.open(anchor.href, '_blank');
         closeMenu();
-        return;
       } else {
         const url = anchor.id;
         redirect(url);
         closeMenu();
       }
+      document.body.classList.remove('overflow-hidden');
     });
   });
-  const redirect = (url: string) => {
+
+  const redirect = (url) => {
     const targetId = url.substring(2);
     const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
+    targetElement.scrollIntoView({ behavior: 'smooth' });
   };
+
   const closeMenu = () => {
     hamburgerMenu.checked = false;
   };
@@ -107,7 +106,7 @@ import Hamburger from './icons/Hamburger.astro';
   document.addEventListener('astro:page-load', () => {
     const sections = document.querySelectorAll('section');
 
-    const callback = (entries: IntersectionObserverEntry[]) => {
+    const callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {

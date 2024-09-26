@@ -24,23 +24,30 @@ import Tailwind from '@/components/icons/Tailwind.astro';
 import Git from '@/components/icons/Git.astro';
 import GitHub from '@/components/icons/GitHub.astro';
 import Docker from '@/components/icons/Docker.astro';
+import Briefcase from '@/components/icons/Briefcase.astro';
+import Code from '@/components/icons/Code.astro';
+import ProfileCheck from '@/components/icons/ProfileCheck.astro';
 
 export const navItems = [
   {
     label: 'experience',
     url: '/#experience',
+    icon: Briefcase,
   },
   {
     label: 'projects',
     url: '/#projects',
+    icon: Code,
   },
   {
     label: 'about',
     url: '/#about',
+    icon: ProfileCheck,
   },
   {
     label: 'contact',
     url: 'mailto:cristian.jimenezsa@hotmail.com',
+    icon: MailIcon,
   },
 ];
 
