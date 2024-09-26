@@ -1,3 +1,5 @@
+import MailIcon from '@/components/icons/Mail.astro';
+import LinkedInIcon from '@/components/icons/LinkedIn.astro';
 import React from '@/components/icons/React.astro';
 import NextJS from '@/components/icons/NextJS.astro';
 import Sass from '@/components/icons/Sass.astro';
@@ -25,41 +27,57 @@ import Docker from '@/components/icons/Docker.astro';
 
 export const navItems = [
   {
-    title: 'Experience',
     label: 'experience',
     url: '/#experience',
   },
   {
-    title: 'Projects',
     label: 'projects',
     url: '/#projects',
   },
   {
-    title: 'About',
     label: 'about',
     url: '/#about',
   },
   {
-    title: 'Contact',
     label: 'contact',
     url: 'mailto:cristian.jimenezsa@hotmail.com',
   },
 ];
 
-export const experience = [
+export const themes = ['light', 'dark', 'system'];
+
+export const locales = [
+  { locale: 'en', label: 'English' },
+  { locale: 'es', label: 'Español' },
+];
+
+export const contactPills = [
   {
-    title: 'Software Engineer',
-    company: 'Nuawi Technologies',
-    date: 'Dec 2023 - Sep 2024',
-    description:
-      'Responsible for the components and utilities for the creation and development of web applications. Improved software delivery times by 30%. Implemented unit tests to validate critical functionalities, detect errors early, and maintain high development standards.',
+    href: 'mailto:cristian.jimenezsa@hotmail.com',
+    i18n: 'hero.contact',
+    aria: 'Mail',
+    icon: MailIcon,
   },
   {
-    title: 'Fullstack Developer',
+    href: 'https://linkedin.com/in/cristian-jimenez-sanchez-052819103',
+    i18n: 'hero.linkedin',
+    aria: 'LinkedIn profile',
+    icon: LinkedInIcon,
+  },
+];
+
+export const experience = [
+  {
+    title: 'experienceItem.nuawi.title',
+    company: 'Nuawi Technologies',
+    date: 'experienceItem.nuawi.date',
+    description: 'experienceItem.nuawi.desc',
+  },
+  {
+    title: 'experienceItem.make.title',
     company: 'Make It Real',
-    date: 'Jun 2023 - Nov 2023',
-    description:
-      'Launched an e-commerce for restaurants in 10 weeks, enabling online reservations, orders, and payments. Migrated a legacy codebase for an animal foundations project to more modern technologies within two weeks and developed new functionalities.',
+    date: 'experienceItem.make.date',
+    description: 'experienceItem.make.desc',
   },
 ];
 
@@ -128,9 +146,8 @@ export const tags = {
 
 export const projects = [
   {
-    title: 'Emprendegan',
-    description:
-      "Emprendegan is an application designed to facilitate livestock and agricultural management. Built on a microservices structure with clean architecture and domain-driven design, it becomes a robust solution capable of being implemented independently of the technologies chosen. It integrates with Google's weather API, allowing farmers to take preventive measures ahead of rain and drought periods, also with Almagan, simplifying the acquisition of food, tools, and supplies.",
+    title: 'projectsItem.emprendegan.title',
+    description: 'projectsItem.emprendegan.desc',
     image: '/projects/emprendegan.webp',
     tags: [
       tags.NEXT,
@@ -143,16 +160,14 @@ export const projects = [
     ],
   },
   {
-    title: 'Steel Lab',
-    description:
-      'Steel Lab is a software designed to ease the management of all processes in companies that provide quality testing solutions for the steel industry. Built on a serverless microservices architecture and linked to the AWS cloud via Lambda functions, Steel Lab becomes a fast, versatile, and cost-effective solution for automating processes. The software is integrated with the Siggo API and linked with Dropbox SDK, enabling massive uploads and storage of information.',
+    title: 'projectsItem.steel.title',
+    description: 'projectsItem.steel.desc',
     image: '/projects/steel-lab.webp',
     tags: [tags.NEXT, tags.SASS, tags.REDUX, tags.NEST, tags.MONGODB, tags.AWS],
   },
   {
-    title: 'Autolavado 360°',
-    description:
-      'Autolavado 360° is an ERP designed with a multitenant architecture, aimed at providing solutions for car wash chains in managing the entire operational and administrative scope of each of their registered headquarters. You can manage personnel, supplies, equipments, services, customers, third-party agreements, income history, settlements, parking lots etc. In addition, it allows the creation of electronic invoices for the DIAN, collection accounts for agreements and notifications sending to clients and allies.',
+    title: 'projectsItem.carwash.title',
+    description: 'projectsItem.carwash.desc',
     image: '/projects/autolavado360.webp',
     tags: [
       tags.NEXT,
@@ -165,18 +180,16 @@ export const projects = [
     ],
   },
   {
-    title: 'Adogta Foundation',
-    description:
-      'Adogta is a web application that connects pet foundations with individuals interested in adopting a furry companion. As a user, you can browse pets that foundations have available for adoption. If you find one you like, you can send an adoption request or contribute to their cause by making a donation. As a foundation, you can create and manage pets through a highly intuitive interface.',
+    title: 'projectsItem.adogta.title',
+    description: 'projectsItem.adogta.desc',
     image: '/projects/adogta-foundation.webp',
     tags: [tags.REACT, tags.REDUX, tags.EXPRESS, tags.MONGODB],
     github: 'https://github.com/Cristianjs93/adogta-client',
     link: 'https://adogta-client.vercel.app/',
   },
   {
-    title: 'Rica App',
-    description:
-      'Rica App is an e-commerce developed with React and Express that allows to place delivery orders from your favorite restaurant and also make reservations. Payments can be made through the Stripe payment gateway. As a restaurant owner, you can efficiently manage products, offering functionalities to add, edit, delete, and view products. Finally, as an administrator, you have the capability to manage both customers and restaurants.',
+    title: 'projectsItem.rica.title',
+    description: 'projectsItem.rica.desc',
     image: '/projects/rica-app.webp',
     tags: [
       tags.REACT,

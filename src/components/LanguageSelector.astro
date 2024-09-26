@@ -1,0 +1,82 @@
+---
+import { locales } from '@/data/constants';
+---
+
+<div class='flex items-center gap-1 ml-3'>
+  <img
+    id='en'
+    src='/UK.png'
+    class='size-6 hover:scale-125 transition-all language-icon'
+    alt='English'
+  />
+  <img
+    id='es'
+    src='/SP.png'
+    class='size-6 hover:scale-125 transition-all language-icon'
+    alt='Español'
+  />
+  <select
+    id='language-select'
+    class='w-fit font-semibold rounded-md bg-[#d9d8ff05] dark:bg-[#27273700] outline-none cursor-pointer'
+    aria-label='Language select'
+  >
+    {
+      locales.map(({ locale, label }) => (
+        <option
+          value={locale}
+          class='appearance-none font-bold dark:bg-gray-900/90'
+        >
+          {label}
+        </option>
+      ))
+    }
+  </select>
+</div>
+
+<script is:inline>
+  let currentLang = localStorage.getItem('lang') || 'en';
+  const languageSelect = document.getElementById('language-select');
+  languageSelect.value = currentLang;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    changeLanguage(currentLang);
+  });
+
+  languageSelect.addEventListener('change', (e) => {
+    changeLanguage(e.target.value);
+  });
+
+  const changeLanguage = (lang) => {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    loadTranslations(lang);
+    updateIcons(lang);
+  };
+
+  const loadTranslations = async (lang) => {
+    const response = await fetch(`/locales/${lang}.json`);
+    const translations = await response.json();
+    applyTranslations(translations);
+  };
+
+  const applyTranslations = (translations) => {
+    document.querySelectorAll('[data-i18n]').forEach((item) => {
+      const key = item.getAttribute('data-i18n');
+      let text = translations[key] || key;
+      if (text.includes('{{currentYear}}')) {
+        const currentYear = new Date().getFullYear();
+        text = text.replace('{{currentYear}}', currentYear);
+        item.textContent = text;
+        return;
+      } else {
+        item.innerHTML = translations[key] || key;
+      }
+    });
+  };
+
+  const updateIcons = (lang) => {
+    document.querySelectorAll('.language-icon').forEach((element) => {
+      element.style.display = element.id === lang ? 'block' : 'none';
+    });
+  };
+</script>

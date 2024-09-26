@@ -1,8 +1,6 @@
 ---
 import Badge from './Badge.astro';
-import ContactPill from './ContactPill.astro';
-import LinkedInIcon from '@/components/icons/LinkedIn.astro';
-import MailIcon from '@/components/icons/Mail.astro';
+import ContactPills from './ContactPills.astro';
 ---
 
 <div class='max-w-xl'>
@@ -19,33 +17,19 @@ import MailIcon from '@/components/icons/Mail.astro';
       rel='noopener'
       aria-label='LinkedIn profile'
     >
-      <Badge>Open to work</Badge>
+      <Badge />
     </a>
   </div>
 </div>
 
 <h1
   class='text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white'
+  data-i18n='hero.greet'
 >
-  Hey, I'm Cristian!
 </h1>
 <p
   class='mt-6 text-xl lg:w-3/4 text-pretty text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300'
+  data-i18n='hero.presentation'
 >
-  <strong>Civil engineer and software developer</strong> with 2 years of experience
-  as a programmer. Focused on developing high-performance software following international
-  guidelines for creating maintainable, extensible and clean code.
 </p>
-<nav class='flex flex-wrap gap-4 mt-5'>
-  <ContactPill href='mailto:cristian.jimenezsa@hotmail.com' aria-label='Mail'>
-    <MailIcon class='size-4' />
-    Contact
-  </ContactPill>
-  <ContactPill
-    href='https://linkedin.com/in/cristian-jimenez-sanchez-052819103'
-    aria-label='LinkedIn profile'
-  >
-    <LinkedInIcon class='size-4' />
-    LinkedIn
-  </ContactPill>
-</nav>
+<ContactPills />

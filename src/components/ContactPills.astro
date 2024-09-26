@@ -1,0 +1,14 @@
+---
+import Pill from './Pill.astro';
+import { contactPills } from '@/data/constants';
+---
+
+<nav class='flex flex-wrap gap-4 mt-5'>
+  {
+    contactPills.map((pill) => (
+      <Pill href={pill.href} i18n={pill.i18n} aria={pill.aria}>
+        <pill.icon class='size-4' />
+      </Pill>
+    ))
+  }
+</nav>
