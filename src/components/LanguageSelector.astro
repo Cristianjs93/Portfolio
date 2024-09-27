@@ -1,19 +1,17 @@
 ---
 import { locales } from '@/data/constants';
+import EnglandFlag from './icons/EnglandFlag.astro';
+import SpainFlag from './icons/SpainFlag.astro';
 ---
 
 <div class='flex items-center gap-1 ml-3'>
-  <img
+  <EnglandFlag
     id='en'
-    src='/UK.png'
     class='size-6 hover:scale-125 transition-all language-icon'
-    alt='English'
   />
-  <img
+  <SpainFlag
     id='es'
-    src='/SP.png'
     class='size-6 hover:scale-125 transition-all language-icon'
-    alt='Español'
   />
   <select
     id='language-select'
