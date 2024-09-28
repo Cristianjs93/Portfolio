@@ -1,3 +1,6 @@
+import Briefcase from '@/components/icons/Briefcase.astro';
+import Code from '@/components/icons/Code.astro';
+import ProfileCheck from '@/components/icons/ProfileCheck.astro';
 import MailIcon from '@/components/icons/Mail.astro';
 import LinkedInIcon from '@/components/icons/LinkedIn.astro';
 import React from '@/components/icons/React.astro';
@@ -24,50 +27,42 @@ import Tailwind from '@/components/icons/Tailwind.astro';
 import Git from '@/components/icons/Git.astro';
 import GitHub from '@/components/icons/GitHub.astro';
 import Docker from '@/components/icons/Docker.astro';
-import Briefcase from '@/components/icons/Briefcase.astro';
-import Code from '@/components/icons/Code.astro';
-import ProfileCheck from '@/components/icons/ProfileCheck.astro';
 
 export const navItems = [
   {
     label: 'experience',
-    url: '/#experience',
+    href: '/#experience',
     icon: Briefcase,
   },
   {
     label: 'projects',
-    url: '/#projects',
+    href: '/#projects',
     icon: Code,
   },
   {
     label: 'about',
-    url: '/#about',
+    href: '/#about',
     icon: ProfileCheck,
   },
   {
     label: 'contact',
-    url: 'mailto:cristian.jimenezsa@hotmail.com',
+    href: 'mailto:cristian.jimenezsa@hotmail.com',
     icon: MailIcon,
   },
 ];
 
 export const themes = ['light', 'dark', 'system'];
 
-export const locales = [
-  { locale: 'en', label: 'English' },
-  { locale: 'es', label: 'Español' },
-];
-
 export const contactPills = [
   {
     href: 'mailto:cristian.jimenezsa@hotmail.com',
-    i18n: 'hero.contact',
+    label: 'contact',
     aria: 'Mail',
     icon: MailIcon,
   },
   {
     href: 'https://linkedin.com/in/cristian-jimenez-sanchez-052819103',
-    i18n: 'hero.linkedin',
+    label: 'linkedin',
     aria: 'LinkedIn profile',
     icon: LinkedInIcon,
   },
@@ -75,16 +70,16 @@ export const contactPills = [
 
 export const experience = [
   {
-    title: 'experienceItem.nuawi.title',
+    title: 'nuawi_title',
     company: 'Nuawi Technologies',
-    date: 'experienceItem.nuawi.date',
-    description: 'experienceItem.nuawi.desc',
+    date: 'nuawi_date',
+    description: 'nuawi_desc',
   },
   {
-    title: 'experienceItem.make.title',
+    title: 'make_title',
     company: 'Make It Real',
-    date: 'experienceItem.make.date',
-    description: 'experienceItem.make.desc',
+    date: 'make_date',
+    description: 'make_desc',
   },
 ];
 
@@ -100,7 +95,7 @@ export const tags = {
     icon: NextJS,
   },
   SASS: {
-    name: 'Saas',
+    name: 'Sass',
     class: 'bg-white text-[#a0296f] border-[#cf649a]',
     icon: Sass,
   },
@@ -153,8 +148,8 @@ export const tags = {
 
 export const projects = [
   {
-    title: 'projectsItem.emprendegan.title',
-    description: 'projectsItem.emprendegan.desc',
+    title: 'emprendegan_title',
+    description: 'emprendegan_desc',
     image: '/projects/emprendegan.webp',
     tags: [
       tags.NEXT,
@@ -167,14 +162,14 @@ export const projects = [
     ],
   },
   {
-    title: 'projectsItem.steel.title',
-    description: 'projectsItem.steel.desc',
+    title: 'steel_title',
+    description: 'steel_desc',
     image: '/projects/steel-lab.webp',
     tags: [tags.NEXT, tags.SASS, tags.REDUX, tags.NEST, tags.MONGODB, tags.AWS],
   },
   {
-    title: 'projectsItem.carwash.title',
-    description: 'projectsItem.carwash.desc',
+    title: 'carwash_title',
+    description: 'carwash_desc',
     image: '/projects/autolavado360.webp',
     tags: [
       tags.NEXT,
@@ -187,16 +182,16 @@ export const projects = [
     ],
   },
   {
-    title: 'projectsItem.adogta.title',
-    description: 'projectsItem.adogta.desc',
+    title: 'adogta_title',
+    description: 'adogta_desc',
     image: '/projects/adogta-foundation.webp',
     tags: [tags.REACT, tags.REDUX, tags.EXPRESS, tags.MONGODB],
     github: 'https://github.com/Cristianjs93/adogta-client',
     link: 'https://adogta-client.vercel.app/',
   },
   {
-    title: 'projectsItem.rica.title',
-    description: 'projectsItem.rica.desc',
+    title: 'rica_title',
+    description: 'rica_desc',
     image: '/projects/rica-app.webp',
     tags: [
       tags.REACT,

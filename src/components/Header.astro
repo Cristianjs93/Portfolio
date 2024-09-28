@@ -1,13 +1,17 @@
 ---
 import { navItems } from '@/data/constants';
+import { getI18N } from '@/i18n';
 import ThemeToggle from './ThemeToggle.astro';
 import LanguageSelector from './LanguageSelector.astro';
 import Hamburger from './icons/Hamburger.astro';
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <header class='fixed top-0 left-0 w-full mt-2 z-30'>
   <div
-    class='flex justify-between sm:justify-center items-center sm:gap-6 lg:gap-12 w-11/12 mx-auto py-2 px-4 sm:max-w-xl lg:max-w-[695px] rounded-full nav-container'
+    class='flex justify-between sm:justify-center items-center sm:gap-6 lg:gap-10 w-11/12 mx-auto py-2 px-4 sm:max-w-xl lg:max-w-[695px] rounded-full nav-container'
   >
     <nav class='flex'>
       <label class='cursor-pointer z-50 sm:hidden' for='hamburger-menu'>
@@ -23,21 +27,22 @@ import Hamburger from './icons/Hamburger.astro';
       >
         {
           navItems.map((link) => (
-            <li class='inline-flex items-center gap-2 w-36 sm:w-auto text-xl sm:text-sm lg:text-md font-medium text-gray-600 dark:text-gray-200'>
+            <li class='inline-flex items-center gap-2 w-36 sm:w-auto text-xl sm:text-sm font-medium text-gray-600 dark:text-gray-200'>
               <link.icon class='size-5 sm:hidden' />
               <a
-                id={link.url}
+                id={link.href}
                 class='transition hover:text-blue-500'
-                href={link.url}
+                href={link.href}
                 aria-label={link.label}
-                data-i18n={`header.${link.label}`}
-              />
+              >
+                {i18n.header[link.label]}
+              </a>
             </li>
           ))
         }
       </ul>
     </nav>
-    <div class='flex justify-center items-center sm:gap-6 lg:gap-12'>
+    <div class='flex justify-center items-center gap-2 sm:gap-6 lg:gap-10'>
       <LanguageSelector />
       <ThemeToggle />
     </div>
@@ -66,45 +71,21 @@ import Hamburger from './icons/Hamburger.astro';
 </style>
 
 <script is:inline>
-  const navItems = document.querySelectorAll('header nav a');
-  const hamburgerMenu = document.getElementById('hamburger-menu');
-
-  navItems.forEach((item) => {
-    item.addEventListener('click', (event) => {
-      event.preventDefault();
-      const anchor = event.target;
-      if (anchor.href.startsWith('mailto:')) {
-        window.open(anchor.href, '_blank');
-        closeMenu();
-      } else {
-        const url = anchor.id;
-        redirect(url);
-        closeMenu();
-      }
-      document.body.classList.remove('overflow-hidden');
-    });
-  });
-
-  const redirect = (url) => {
-    const targetId = url.substring(2);
-    const targetElement = document.getElementById(targetId);
-    targetElement.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const closeMenu = () => {
-    hamburgerMenu.checked = false;
-  };
-
-  hamburgerMenu.addEventListener('change', () => {
-    if (hamburgerMenu.checked) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-  });
-
   document.addEventListener('astro:page-load', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navItems = document.querySelectorAll('header nav a');
     const sections = document.querySelectorAll('section');
+
+    navItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        hamburgerMenu.checked = false;
+        document.body.classList.remove('overflow-hidden');
+      });
+    });
+
+    hamburgerMenu.addEventListener('change', () => {
+      document.body.classList.toggle('overflow-hidden');
+    });
 
     const callback = (entries) => {
       entries.forEach((entry) => {

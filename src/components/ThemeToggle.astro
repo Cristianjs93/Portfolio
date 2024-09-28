@@ -1,8 +1,12 @@
 ---
+import { themes } from '@/data/constants';
+import { getI18N } from '@/i18n';
 import SunIcon from './icons/Sun.astro';
 import MoonIcon from './icons/Moon.astro';
 import SystemIcon from './icons/System.astro';
-import { themes } from '@/data/constants';
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div class='relative ml-1 mr-1'>
@@ -12,20 +16,23 @@ import { themes } from '@/data/constants';
     class='appearance-none border-none flex items-center hover:scale-125 transition'
   >
     <span class='sr-only'>Elige el tema</span>
-    <SunIcon id='light' class='theme-toggle-icon size-7 transition-all' />
+    <SunIcon
+      id='light'
+      class='theme-toggle-icon size-7 sm:size-5 transition-all'
+    />
     <MoonIcon
       id='dark'
       class='theme-toggle-icon absolute size-7 sm:size-5 transition-all'
     />
     <SystemIcon
       id='system'
-      class='theme-toggle-icon absolute size-7 transition-all'
+      class='theme-toggle-icon absolute size-7 sm:size-5 transition-all'
     />
   </button>
   <div
     transition:persist
     id='themes-menu'
-    class='absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md'
+    class='absolute hidden scale-80 top-10 sm:top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md'
   >
     <ul>
       {
@@ -33,8 +40,9 @@ import { themes } from '@/data/constants';
           <li
             data-theme={theme}
             class='themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm'
-            data-i18n={`theme.${theme}`}
-          />
+          >
+            {i18n.themes[theme]}
+          </li>
         ))
       }
     </ul>
@@ -106,6 +114,7 @@ import { themes } from '@/data/constants';
     e.stopPropagation();
     const isClosed = !themesMenu.classList.contains('open');
     themesMenu.classList[isClosed ? 'add' : 'remove']('open');
+    document.getElementById('language-menu').classList.remove('open');
   });
 
   document.querySelectorAll('.themes-menu-option').forEach((element) => {

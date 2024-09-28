@@ -1,6 +1,10 @@
 ---
+import { getI18N } from '@/i18n';
 import Badge from './Badge.astro';
 import ContactPills from './ContactPills.astro';
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div class='max-w-xl'>
@@ -24,12 +28,13 @@ import ContactPills from './ContactPills.astro';
 
 <h1
   class='text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white'
-  data-i18n='hero.greet'
 >
+  {i18n.hero.greet}
 </h1>
 <p
   class='mt-6 text-xl lg:w-3/4 text-pretty text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300'
-  data-i18n='hero.presentation'
 >
+  <strong>{i18n.hero.charge}</strong>
+  {i18n.hero.presentation}
 </p>
 <ContactPills />

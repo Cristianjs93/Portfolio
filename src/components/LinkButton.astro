@@ -1,5 +1,5 @@
 ---
-const { href, i18n, aria } = Astro.props;
+const { href, aria } = Astro.props;
 ---
 
 <a
@@ -11,5 +11,4 @@ const { href, i18n, aria } = Astro.props;
   aria-label={aria}
 >
   <slot />
-  <span data-i18n={i18n}></span>
 </a>

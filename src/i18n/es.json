@@ -1,0 +1,60 @@
+{
+  "page": {
+    "title": "Portafolio - Cristian Jimenez",
+    "description": "¡Juntos crearemos experiencias únicas! 🚀",
+    "section_experience": "Experiencia Laboral",
+    "section_projects": "Proyectos",
+    "section_about": "Sobre mí"
+  },
+  "header": {
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "themes": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "badge": { "message": "Disponible para trabajar" },
+  "hero": {
+    "greet": "¡Hola, soy Cristian!",
+    "charge": "Ingeniero civil y desarrollador de software",
+    "presentation": "con 2 años de experiencia como programador. Enfocado en desarrollar software de alto rendimiento siguiendo directrices internacionales para crear código mantenible, extensible y limpio."
+  },
+  "pill": {
+    "contact": "Contacto",
+    "linkedin": "LinkedIn"
+  },
+  "experienceItem": {
+    "nuawi_title": "Ingeniero de Software",
+    "nuawi_date": "Dic 2023 - Sep 2024",
+    "nuawi_desc": "Responsable de los componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejoré los tiempos de entrega de software en un 30%. Implementé pruebas unitarias para validar funcionalidades críticas, detectar errores de forma temprana y mantener altos estándares de desarrollo.",
+    "make_title": "Desarrollador Fullstack",
+    "make_date": "Jun 2023 - Nov 2023",
+    "make_desc": "Lanzamiento de un e-commerce para restaurantes en 10 semanas, habilitando reservas en línea, pedidos y pagos. Migré una base de código legacy para un proyecto de fundaciones de animales a tecnologías más modernas en dos semanas y desarrollé nuevas funcionalidades."
+  },
+  "projectsItem": {
+    "emprendegan_title": "Emprendegan",
+    "emprendegan_desc": "Emprendegan es una aplicación diseñada para facilitar la gestión ganadera y agrícola. Construida sobre una estructura de microservicios con arquitectura limpia y diseño guiado por el dominio, se convierte en una solución robusta capaz de implementarse independientemente de las tecnologías elegidas. Se integra con la API de clima de Google, lo que permite a los agricultores tomar medidas preventivas antes de períodos de lluvia y sequía, y también con Almagan, simplificando la adquisición de alimentos, herramientas y suministros.",
+    "steel_title": "Steel Lab",
+    "steel_desc": "Steel Lab es un software diseñado para facilitar la gestión de todos los procesos en empresas que ofrecen soluciones de pruebas de calidad para la industria del acero. Construido sobre una arquitectura de microservicios serverless y conectado a la nube de AWS mediante funciones Lambda, Steel Lab se convierte en una solución rápida, versátil y rentable para la automatización de procesos. El software está integrado con la API de Siggo y vinculado con el SDK de Dropbox, lo que permite carga masiva de archivos y almacenamiento de información",
+    "carwash_title": "Autolavado 360°",
+    "carwash_desc": "Autolavado 360° es un ERP diseñado con una arquitectura multitenant, dirigido a proporcionar soluciones para cadenas de autolavados en la gestión de todo el ámbito operativo y administrativo de cada una de sus sedes registradas. Permite gestionar personal, suministros, equipos, servicios, clientes, acuerdos con terceros, historial de ingresos, liquidaciones, estacionamientos, etc. Además, facilita la creación de facturas electrónicas para la DIAN, cuentas de cobro para acuerdos y el envío de notificaciones a clientes y aliados.",
+    "adogta_title": "Fundación Adogta",
+    "adogta_desc": "Adogta es una aplicación web que conecta fundaciones de animales con personas interesadas en adoptar una mascota. Como usuario, puedes explorar las mascotas que las fundaciones tienen disponibles para adopción. Si encuentras una que te guste, puedes enviar una solicitud de adopción o contribuir a su causa realizando una donación. Como fundación, puedes crear y gestionar las mascotas a través de una interfaz altamente intuitiva.",
+    "rica_title": "Rica App",
+    "rica_desc": "Rica App es un e-commerce desarrollado con React y Express que permite realizar pedidos a domicilio en tu restaurante favorito y también hacer reservas. Los pagos se pueden realizar a través de la pasarela de pago Stripe. Como dueño de un restaurante, puedes gestionar eficientemente tu menú, con funcionalidades para agregar, editar, eliminar y ver productos. Finalmente, como administrador, tienes la capacidad de gestionar tanto a los clientes como a los restaurantes."
+  },
+  "linkButton": { "code": "Código", "preview": "Visitar" },
+  "about": {
+    "first_p": "¡Hola, soy Cristian! Mi pasión por la programación comenzó a los 11 años, cuando empecé a desarrollar en una Compaq utilizando Visual Basic y Visual C++. Estudié ingeniería civil y trabajé en ese campo, pero eventualmente redescubrí la programación, un mundo del que no me he apartado desde entonces. Actualmente, estoy buscando activamente nuevas oportunidades laborales que me permitan seguir creciendo como desarrollador.",
+    "second_p_init": "Entre mis logros destaco",
+    "second_p_first_achievement": "liderar equipos de trabajo",
+    "second_p_middle": "para alcanzar resultados dentro de los plazos establecidos, así como el",
+    "second_p_second_achievement": "desarrollo de software ERP para empresas de diversos sectores,",
+    "second_p_finish": "lo que ha contribuido significativamente a mejorar sus métricas de producción y calidad.",
+    "third_p": "Mi objetivo es transformar positivamente la forma en que vivimos a través del desarrollo de software, aprovechando mis habilidades y conocimientos para enfrentar desafíos mayores y crear soluciones innovadoras que marquen la diferencia."
+  }
+}

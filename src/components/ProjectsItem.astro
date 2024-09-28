@@ -1,4 +1,5 @@
 ---
+import { getI18N } from '@/i18n';
 import GitHub from './icons/GitHub.astro';
 import LinkButton from './LinkButton.astro';
 import Link from './icons/Link.astro';
@@ -17,6 +18,9 @@ interface Props {
 }
 
 const { image, title, tags, description, github, link } = Astro.props;
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <article
@@ -34,10 +38,8 @@ const { image, title, tags, description, github, link } = Astro.props;
   </div>
 
   <div class='w-full md:w-1/2 md:max-w-lg'>
-    <h3
-      class='text-2xl font-bold text-gray-800 dark:text-gray-100'
-      data-i18n={title}
-    >
+    <h3 class='text-2xl font-bold text-gray-800 dark:text-gray-100'>
+      {i18n.projectsItem[title]}
     </h3>
     <div class='flex flex-wrap mt-2'>
       <ul class='flex flex-row mb-2 gap-2 flex-wrap'>
@@ -55,31 +57,23 @@ const { image, title, tags, description, github, link } = Astro.props;
         }
       </ul>
 
-      <div
-        class='mt-2 text-pretty text-gray-700 dark:text-gray-400'
-        data-i18n={description}
-      >
+      <div class='mt-2 text-pretty text-gray-700 dark:text-gray-400'>
+        {i18n.projectsItem[description]}
       </div>
       <footer class='flex items-end justify-start mt-4 gap-x-4'>
         {
           github && (
-            <LinkButton
-              href={github}
-              i18n='linkButton.code'
-              aria-label='GitHub Repository'
-            >
+            <LinkButton href={github} aria-label='GitHub Repository'>
               <GitHub class='size-6' />
+              {i18n.linkButton.code}
             </LinkButton>
           )
         }
         {
           link && (
-            <LinkButton
-              href={link}
-              i18n='linkButton.preview'
-              aria-label='Preview'
-            >
+            <LinkButton href={link} aria-label='Preview'>
               <Link class='size-4' />
+              {i18n.linkButton.preview}
             </LinkButton>
           )
         }
