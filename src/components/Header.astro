@@ -1,11 +1,13 @@
 ---
 import { navItems } from '@/data/constants';
 import { getI18N } from '@/i18n';
+import { useTranslatedPath } from '@/i18n/utils';
 import ThemeToggle from './ThemeToggle.astro';
 import LanguageSelector from './LanguageSelector.astro';
 import Hamburger from './icons/Hamburger.astro';
 
 const { currentLocale } = Astro;
+const translatePath = useTranslatedPath(String(currentLocale));
 const i18n = getI18N({ currentLocale });
 ---
 
@@ -32,7 +34,7 @@ const i18n = getI18N({ currentLocale });
               <a
                 id={link.href}
                 class='transition hover:text-blue-500'
-                href={link.href}
+                href={translatePath(link.href, currentLocale)}
                 aria-label={link.label}
               >
                 {i18n.header[link.label]}
