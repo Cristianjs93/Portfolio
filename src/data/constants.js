@@ -4,16 +4,21 @@ import ProfileCheck from '@/components/icons/ProfileCheck.astro';
 import MailIcon from '@/components/icons/Mail.astro';
 import LinkedInIcon from '@/components/icons/LinkedIn.astro';
 import React from '@/components/icons/React.astro';
+// import ReactNative from '@/components/icons/ReactNative.astro';
 import NextJS from '@/components/icons/NextJS.astro';
 import Sass from '@/components/icons/Sass.astro';
+import Tailwind from '@/components/icons/Tailwind.astro';
 import Redux from '@/components/icons/Redux.astro';
+import Zustand from '@/components/icons/Zustand.astro';
 import Express from '@/components/icons/Express.astro';
+// import Graphql from '@/components/icons/Graphql.astro';
 import NestJS from '@/components/icons/NestJS.astro';
 import PostgreSQL from '@/components/icons/PostgreSQL.astro';
 import MongoDB from '@/components/icons/MongoDB.astro';
 import Prisma from '@/components/icons/Prisma.astro';
 import TypeORM from '@/components/icons/TypeORM.astro';
 import Jest from '@/components/icons/Jest.astro';
+import Playwright from '@/components/icons/Playwright.astro';
 import Aws from '@/components/icons/Aws.astro';
 import NodeJS from '@/components/icons/NodeJS.astro';
 import Html from '@/components/icons/Html.astro';
@@ -70,6 +75,12 @@ export const contactPills = [
 
 export const experience = [
   {
+    title: 'levels_title',
+    company: 'Levels Health',
+    date: 'levels_date',
+    description: 'levels_desc',
+  },
+  {
     title: 'nuawi_title',
     company: 'Nuawi Technologies',
     date: 'nuawi_date',
@@ -89,6 +100,11 @@ export const tags = {
     class: 'bg-white text-[#0077cc] border-[#00d8ff]',
     icon: React,
   },
+  // REACT_NATIVE: {
+  //   name: 'React Native',
+  //   class: 'bg-white text-[#0077cc] border-[#00d8ff]',
+  //   icon: ReactNative,
+  // },
   NEXT: {
     name: 'Next.js',
     class: 'bg-black text-white border-[#ffffff45]',
@@ -99,16 +115,31 @@ export const tags = {
     class: 'bg-white text-[#a0296f] border-[#cf649a]',
     icon: Sass,
   },
+  TAILWIND: {
+    name: 'Tailwind',
+    class: 'bg-white text-[#0077cc] border-[#38BDF8]',
+    icon: Tailwind,
+  },
   REDUX: {
     name: 'Redux',
     class: 'bg-white text-[#764abc] border-[#764abc]',
     icon: Redux,
+  },
+  ZUSTAND: {
+    name: 'Zustand',
+    class: 'bg-white text-[#4B2E2B] border-[#4B2E2B]',
+    icon: Zustand,
   },
   EXPRESS: {
     name: 'Express.js',
     class: 'bg-[#ababab] text-black border-black',
     icon: Express,
   },
+  // GRAPHQL: {
+  //   name: 'Graphql',
+  //   class: 'bg-[#ababab] text-black border-black',
+  //   icon: Graphql,
+  // },
   NEST: {
     name: 'Nest.js',
     class: 'bg-[#961c37] text-white border-[#e0234e]',
@@ -139,6 +170,11 @@ export const tags = {
     class: 'bg-white text-[#99425b] border-[#99425b]',
     icon: Jest,
   },
+  PLAYWRIGHT: {
+    name: 'Playwright',
+    class: 'bg-white text-[#2EAD33] border-[#2EAD33]',
+    icon: Playwright,
+  },
   AWS: {
     name: 'AWS',
     class: 'bg-[#f3f3f3] text-black border-[#f90]',
@@ -147,6 +183,33 @@ export const tags = {
 };
 
 export const projects = [
+  {
+    title: 'levels_health_title',
+    description: 'levels_healt_desc',
+    image: '/projects/levels_health.webp',
+    tags: [
+      // tags.REACT_NATIVE,
+      tags.NEXT,
+      tags.TAILWIND,
+      tags.ZUSTAND,
+      // tags.GRAPHQL,
+      tags.AWS,
+      tags.POSTGRESQL,
+    ],
+  },
+  {
+    title: 'mainstreet_title',
+    description: 'mainstreet_desc',
+    image: '/projects/mainstreet.webp',
+    tags: [
+      tags.REACT,
+      tags.TAILWIND,
+      tags.ZUSTAND,
+      tags.PLAYWRIGHT,
+      tags.EXPRESS,
+      tags.POSTGRESQL,
+    ],
+  },
   {
     title: 'emprendegan_title',
     description: 'emprendegan_desc',
@@ -187,7 +250,6 @@ export const projects = [
     image: '/projects/adogta-foundation.webp',
     tags: [tags.REACT, tags.REDUX, tags.EXPRESS, tags.MONGODB],
     github: 'https://github.com/Cristianjs93/adogta-client',
-    link: 'https://adogta-client.vercel.app/',
   },
   {
     title: 'rica_title',
@@ -202,7 +264,6 @@ export const projects = [
       tags.PRISMA,
     ],
     github: 'https://github.com/Cristianjs93/front-app-restaurant',
-    link: 'https://front-app-restaurant.vercel.app/',
   },
 ];
 
@@ -214,9 +275,11 @@ export const stack = [
   { icon: Typescript },
   { icon: Python },
   { icon: React },
+  // { icon: ReactNative },
   { icon: NextJS },
   { icon: AstroIcon },
   { icon: Express, class: 'fill-black dark:fill-white' },
+  // { icon: Graphql, class: 'fill-black dark:fill-white' },
   { icon: NestJS },
   { icon: Django },
   { icon: PostgreSQL },
@@ -224,6 +287,7 @@ export const stack = [
   { icon: Prisma, class: 'fill-black dark:fill-white' },
   { icon: TypeORM },
   { icon: Redux },
+  { icon: Zustand },
   { icon: Sass },
   { icon: Tailwind },
   { icon: Git },
@@ -231,4 +295,5 @@ export const stack = [
   { icon: Docker },
   { icon: Aws, class: 'fill-[#252f3e] dark:fill-white' },
   { icon: Jest },
+  { icon: Playwright },
 ];

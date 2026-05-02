@@ -21,14 +21,17 @@
   "hero": {
     "greet": "Hey, I'm Cristian!",
     "charge": "Civil engineer and software developer",
-    "presentation": "with 2 years of experience as a programmer. Focused on developing high-performance software following international guidelines for creating maintainable, extensible and clean code."
+    "presentation": "with 3+ years of experience as a programmer. Focused on developing high-performance software following international guidelines for creating maintainable, extensible and clean code."
   },
   "pill": {
     "contact": "Contact",
     "linkedin": "LinkedIn"
   },
   "experienceItem": {
-    "nuawi_title": "Software Engineer",
+    "levels_title": "Software Developer",
+    "levels_date": "Nov 2024 - May 2026",
+    "levels_desc": "Designed, developed, and maintained applications focused on performance and quality, delivering new features and optimizing code to improve system stability. Contributed to an automotive scheduling platform integrated with APIs, automating appointment and work order creation to enhance operational efficiency. Additionally, optimized and debugged a digital health application, reducing issues and improving overall platform performance.",
+    "nuawi_title": "Software Developer",
     "nuawi_date": "Dec 2023 - Sep 2024",
     "nuawi_desc": "Responsible for the components and utilities for the creation and development of web applications. Improved software delivery times by 30%. Implemented unit tests to validate critical functionalities, detect errors early, and maintain high development standards.",
     "make_title": "Fullstack Developer",
@@ -36,6 +39,10 @@
     "make_desc": "Launched an e-commerce for restaurants in 10 weeks, enabling online reservations, orders, and payments. Migrated a legacy codebase for an animal foundations project to more modern technologies within two weeks and developed new functionalities."
   },
   "projectsItem": {
+    "levels_health_title": "Levels Health",
+    "levels_healt_desc": "Levels is a digital health platform focused on tracking and interpreting health data over time. It combines a web application with native iOS and Android apps, enabling users to monitor trends, follow structured programs, and stay engaged across devices.",
+    "mainstreet_title": "Main Street Auto",
+    "mainstreet_desc": "MainStreet Auto is a customer-facing web application for scheduling car repairs, exploring shop locations on a map, and tracking service orders. Delivered as a Progressive Web App (PWA), it supports installation, offline capabilities via a service worker, and a seamless experience across mobile and desktop devices.",
     "emprendegan_title": "Emprendegan",
     "emprendegan_desc": "Emprendegan is an application designed to facilitate livestock and agricultural management. Built on a microservices structure with clean architecture and domain-driven design, it becomes a robust solution capable of being implemented independently of the technologies chosen. It integrates with Google's weather API, allowing farmers to take preventive measures ahead of rain and drought periods, also with Almagan, simplifying the acquisition of food, tools, and supplies.",
     "steel_title": "Steel Lab",
@@ -50,11 +57,11 @@
   "linkButton": { "code": "Code", "preview": "Preview" },
   "about": {
     "first_p": "Hi, I'm Cristian! My passion for programming began at the age of 11, when I started developing on a Compaq using Visual Basic and Visual C++. I studied civil engineering and worked in that field, but eventually, I rediscovered programming, a world I haven't left since. I am currently actively seeking new job opportunities that will allow me to continue growing as a developer.",
-    "second_p_init": "Among my achievements, I have",
-    "second_p_first_achievement": "led work teams",
-    "second_p_middle": "to achieve results within established deadlines, as well as the",
-    "second_p_second_achievement": "development of ERP software for companies in various sectors,",
-    "second_p_finish": "which has contributed significantly to improving their production and quality metrics.",
+    "second_p_init": "Among my achievements, I highlight the",
+    "second_p_first_achievement": "optimization of development processes",
+    "second_p_middle": "through effective task and time management, ensuring the timely delivery of solutions. Additionally, I have contributed to the",
+    "second_p_second_achievement": "development of ERP software and mobile applications",
+    "second_p_finish": "for companies across various industries, helping improve their production and quality metrics.",
     "third_p": "My goal is to positively transform the way we live through software development, leveraging my skills and knowledge to tackle bigger challenges and create innovative solutions that make a difference."
   }
 }

@@ -21,14 +21,17 @@
   "hero": {
     "greet": "¡Hola, soy Cristian!",
     "charge": "Ingeniero civil y desarrollador de software",
-    "presentation": "con 2 años de experiencia como programador. Enfocado en desarrollar software de alto rendimiento siguiendo directrices internacionales para crear código mantenible, extensible y limpio."
+    "presentation": "con `mas de 3 años de experiencia como programador. Enfocado en desarrollar software de alto rendimiento siguiendo directrices internacionales para crear código mantenible, extensible y limpio."
   },
   "pill": {
     "contact": "Contacto",
     "linkedin": "LinkedIn"
   },
   "experienceItem": {
-    "nuawi_title": "Ingeniero de Software",
+    "levels_title": "Desarrollador de Software",
+    "levels_date": "Nov 2024 - May 2026",
+    "levels_desc": "Diseñé, desarrollé y mantuve aplicaciones enfocadas en rendimiento y calidad, implementando nuevas funcionalidades y optimizando código para mejorar la estabilidad del sistema. Contribuí al desarrollo de una plataforma de agendamiento automotriz integrada con APIs, automatizando la creación de citas y órdenes de trabajo para aumentar la eficiencia operativa. Además, optimicé y depuré una aplicación de salud digital, reduciendo incidencias y mejorando el rendimiento general de la plataforma.",
+    "nuawi_title": "Desarrollador de Software",
     "nuawi_date": "Dic 2023 - Sep 2024",
     "nuawi_desc": "Responsable de los componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejoré los tiempos de entrega de software en un 30%. Implementé pruebas unitarias para validar funcionalidades críticas, detectar errores de forma temprana y mantener altos estándares de desarrollo.",
     "make_title": "Desarrollador Fullstack",
@@ -36,6 +39,10 @@
     "make_desc": "Lanzamiento de un e-commerce para restaurantes en 10 semanas, habilitando reservas en línea, pedidos y pagos. Migré una base de código legacy para un proyecto de fundaciones de animales a tecnologías más modernas en dos semanas y desarrollé nuevas funcionalidades."
   },
   "projectsItem": {
+    "levels_health_title": "Levels Health",
+    "levels_healt_desc": "Levels es una plataforma de salud digital enfocada en el seguimiento e interpretación de datos de salud a lo largo del tiempo. Combina una aplicación web con apps nativas para iOS y Android, lo que permite a los usuarios monitorear tendencias, seguir programas estructurados y mantenerse activos en múltiples dispositivos.",
+    "mainstreet_title": "Main Street Auto",
+    "mainstreet_desc": "MainStreet Auto es una aplicación web orientada al cliente para programar reparaciones de vehículos, explorar ubicaciones de talleres en un mapa y hacer seguimiento de órdenes de servicio. Se entrega como una Aplicación Web Progresiva (PWA), lo que permite su instalación, capacidades offline mediante un service worker y una experiencia fluida tanto en dispositivos móviles como en escritorio.",
     "emprendegan_title": "Emprendegan",
     "emprendegan_desc": "Emprendegan es una aplicación diseñada para facilitar la gestión ganadera y agrícola. Construida sobre una estructura de microservicios con arquitectura limpia y diseño guiado por el dominio, se convierte en una solución robusta capaz de implementarse independientemente de las tecnologías elegidas. Se integra con la API de clima de Google, lo que permite a los agricultores tomar medidas preventivas antes de períodos de lluvia y sequía, y también con Almagan, simplificando la adquisición de alimentos, herramientas y suministros.",
     "steel_title": "Steel Lab",
@@ -50,11 +57,11 @@
   "linkButton": { "code": "Código", "preview": "Visitar" },
   "about": {
     "first_p": "¡Hola, soy Cristian! Mi pasión por la programación comenzó a los 11 años, cuando empecé a desarrollar en una Compaq utilizando Visual Basic y Visual C++. Estudié ingeniería civil y trabajé en ese campo, pero eventualmente redescubrí la programación, un mundo del que no me he apartado desde entonces. Actualmente, estoy buscando activamente nuevas oportunidades laborales que me permitan seguir creciendo como desarrollador.",
-    "second_p_init": "Entre mis logros destaco",
-    "second_p_first_achievement": "liderar equipos de trabajo",
-    "second_p_middle": "para alcanzar resultados dentro de los plazos establecidos, así como el",
-    "second_p_second_achievement": "desarrollo de software ERP para empresas de diversos sectores,",
-    "second_p_finish": "lo que ha contribuido significativamente a mejorar sus métricas de producción y calidad.",
+    "second_p_init": "Entre mis logros destaco la",
+    "second_p_first_achievement": "optimización de procesos de desarrollo",
+    "second_p_middle": "mediante una adecuada gestión de tareas y tiempos, asegurando la entrega oportuna de soluciones. Además, he participado en el",
+    "second_p_second_achievement": "desarrollo de software ERP y aplicaciones moviles",
+    "second_p_finish": "para empresas de diversos sectores, contribuyendo a mejorar sus métricas de producción y calidad.",
     "third_p": "Mi objetivo es transformar positivamente la forma en que vivimos a través del desarrollo de software, aprovechando mis habilidades y conocimientos para enfrentar desafíos mayores y crear soluciones innovadoras que marquen la diferencia."
   }
 }
