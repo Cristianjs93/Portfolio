@@ -16,7 +16,7 @@ interface Props {
   link?: String;
 }
 
-const { image, title, tags, description, github, link } = Astro.props;
+const { image, title, tags, description, github } = Astro.props;
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });

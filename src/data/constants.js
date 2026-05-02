@@ -4,14 +4,14 @@ import ProfileCheck from '@/components/icons/ProfileCheck.astro';
 import MailIcon from '@/components/icons/Mail.astro';
 import LinkedInIcon from '@/components/icons/LinkedIn.astro';
 import React from '@/components/icons/React.astro';
-// import ReactNative from '@/components/icons/ReactNative.astro';
+import ReactNative from '@/components/icons/ReactNative.astro';
 import NextJS from '@/components/icons/NextJS.astro';
 import Sass from '@/components/icons/Sass.astro';
 import Tailwind from '@/components/icons/Tailwind.astro';
 import Redux from '@/components/icons/Redux.astro';
 import Zustand from '@/components/icons/Zustand.astro';
 import Express from '@/components/icons/Express.astro';
-// import Graphql from '@/components/icons/Graphql.astro';
+import Graphql from '@/components/icons/Graphql.astro';
 import NestJS from '@/components/icons/NestJS.astro';
 import PostgreSQL from '@/components/icons/PostgreSQL.astro';
 import MongoDB from '@/components/icons/MongoDB.astro';
@@ -28,7 +28,6 @@ import Typescript from '@/components/icons/Typescript.astro';
 import Python from '@/components/icons/Python.astro';
 import AstroIcon from '@/components/icons/AstroIcon.astro';
 import Django from '@/components/icons/Django.astro';
-import Tailwind from '@/components/icons/Tailwind.astro';
 import Git from '@/components/icons/Git.astro';
 import GitHub from '@/components/icons/GitHub.astro';
 import Docker from '@/components/icons/Docker.astro';
@@ -97,32 +96,32 @@ export const experience = [
 export const tags = {
   REACT: {
     name: 'React',
-    class: 'bg-white text-[#0077cc] border-[#00d8ff]',
+    class: 'bg-white text-[#0077CC] border-[#00D8FF]',
     icon: React,
   },
-  // REACT_NATIVE: {
-  //   name: 'React Native',
-  //   class: 'bg-white text-[#0077cc] border-[#00d8ff]',
-  //   icon: ReactNative,
-  // },
+  REACT_NATIVE: {
+    name: 'React Native',
+    class: 'bg-white text-[#0077CC] border-[#00D8FF]',
+    icon: ReactNative,
+  },
   NEXT: {
     name: 'Next.js',
-    class: 'bg-black text-white border-[#ffffff45]',
+    class: 'bg-black text-white border-[#FFFFFF45]',
     icon: NextJS,
   },
   SASS: {
     name: 'Sass',
-    class: 'bg-white text-[#a0296f] border-[#cf649a]',
+    class: 'bg-white text-[#A0296F] border-[#CF649A]',
     icon: Sass,
   },
   TAILWIND: {
     name: 'Tailwind',
-    class: 'bg-white text-[#0077cc] border-[#38BDF8]',
+    class: 'bg-white text-[#0077CC] border-[#38BDF8]',
     icon: Tailwind,
   },
   REDUX: {
     name: 'Redux',
-    class: 'bg-white text-[#764abc] border-[#764abc]',
+    class: 'bg-white text-[#764ABC] border-[#764ABC]',
     icon: Redux,
   },
   ZUSTAND: {
@@ -132,17 +131,17 @@ export const tags = {
   },
   EXPRESS: {
     name: 'Express.js',
-    class: 'bg-[#ababab] text-black border-black',
+    class: 'bg-[#F0F1F3] text-black border-black',
     icon: Express,
   },
-  // GRAPHQL: {
-  //   name: 'Graphql',
-  //   class: 'bg-[#ababab] text-black border-black',
-  //   icon: Graphql,
-  // },
+  GRAPHQL: {
+    name: 'Graphql',
+    class: 'bg-[#F3F4F0] text-[#E10098] border-[#E10098]',
+    icon: Graphql,
+  },
   NEST: {
     name: 'Nest.js',
-    class: 'bg-[#961c37] text-white border-[#e0234e]',
+    class: 'bg-[#961C37] text-white border-[#E0234E]',
     icon: NestJS,
   },
   POSTGRESQL: {
@@ -152,7 +151,7 @@ export const tags = {
   },
   MONGODB: {
     name: 'MongoDB',
-    class: 'bg-[#17743e] text-white border-[#01EC64]',
+    class: 'bg-[#17743E] text-white border-[#01EC64]',
     icon: MongoDB,
   },
   PRISMA: {
@@ -167,7 +166,7 @@ export const tags = {
   },
   JEST: {
     name: 'Jest',
-    class: 'bg-white text-[#99425b] border-[#99425b]',
+    class: 'bg-white text-[#99425B] border-[#99425B]',
     icon: Jest,
   },
   PLAYWRIGHT: {
@@ -177,7 +176,7 @@ export const tags = {
   },
   AWS: {
     name: 'AWS',
-    class: 'bg-[#f3f3f3] text-black border-[#f90]',
+    class: 'bg-[#F0F1F3] text-black border-[#F90]',
     icon: Aws,
   },
 };
@@ -188,11 +187,11 @@ export const projects = [
     description: 'levels_healt_desc',
     image: '/projects/levels_health.webp',
     tags: [
-      // tags.REACT_NATIVE,
+      tags.REACT_NATIVE,
       tags.NEXT,
       tags.TAILWIND,
       tags.ZUSTAND,
-      // tags.GRAPHQL,
+      tags.GRAPHQL,
       tags.AWS,
       tags.POSTGRESQL,
     ],
@@ -275,11 +274,11 @@ export const stack = [
   { icon: Typescript },
   { icon: Python },
   { icon: React },
-  // { icon: ReactNative },
+  { icon: ReactNative },
   { icon: NextJS },
   { icon: AstroIcon },
   { icon: Express, class: 'fill-black dark:fill-white' },
-  // { icon: Graphql, class: 'fill-black dark:fill-white' },
+  { icon: Graphql, class: 'fill-black dark:fill-white' },
   { icon: NestJS },
   { icon: Django },
   { icon: PostgreSQL },
