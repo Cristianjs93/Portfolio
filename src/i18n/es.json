@@ -20,8 +20,8 @@
   "badge": { "message": "Disponible para trabajar" },
   "hero": {
     "greet": "¡Hola, soy Cristian!",
-    "charge": "Ingeniero civil y desarrollador de software",
-    "presentation": "con `mas de 3 años de experiencia como programador. Enfocado en desarrollar software de alto rendimiento siguiendo directrices internacionales para crear código mantenible, extensible y limpio."
+    "charge": "Desarrollador de software",
+    "presentation": "con mas de 3 años de experiencia construyendo aplicaciones web y móviles para startups y empresas internacionales utilizando Next.js, Node.js, NestJS y AWS. Me especializo en transformar problemas complejos en productos confiables, mantenibles y listos para crecer."
   },
   "pill": {
     "contact": "Contacto",
@@ -56,12 +56,12 @@
   },
   "linkButton": { "code": "Código", "preview": "Visitar" },
   "about": {
-    "first_p": "¡Hola, soy Cristian! Mi pasión por la programación comenzó a los 11 años, cuando empecé a desarrollar en una Compaq utilizando Visual Basic y Visual C++. Estudié ingeniería civil y trabajé en ese campo, pero eventualmente redescubrí la programación, un mundo del que no me he apartado desde entonces. Actualmente, estoy buscando activamente nuevas oportunidades laborales que me permitan seguir creciendo como desarrollador.",
-    "second_p_init": "Entre mis logros destaco la",
-    "second_p_first_achievement": "optimización de procesos de desarrollo",
-    "second_p_middle": "mediante una adecuada gestión de tareas y tiempos, asegurando la entrega oportuna de soluciones. Además, he participado en el",
-    "second_p_second_achievement": "desarrollo de software ERP y aplicaciones moviles",
-    "second_p_finish": "para empresas de diversos sectores, contribuyendo a mejorar sus métricas de producción y calidad.",
-    "third_p": "Mi objetivo es transformar positivamente la forma en que vivimos a través del desarrollo de software, aprovechando mis habilidades y conocimientos para enfrentar desafíos mayores y crear soluciones innovadoras que marquen la diferencia."
+    "first_p_init": "Soy Desarrollador Fullstack especializado en la",
+    "first_p_highlight": "construcción de aplicaciones escalables",
+    "first_p_finish": "utilizando tecnologías modernas del ecosistema Javascript. Durante mi carrera he trabajado en productos utilizados por miles de usuarios, desarrollando desde interfaces web y móviles hasta APIs, microservicios e infraestructura cloud. Mi experiencia incluye integración de pasarelas de pago con Stripe, arquitecturas basadas en eventos, procesamiento asíncrono, AWS, Docker y flujos de desarrollo asistidos por IA.",
+    "second_p_init": "Disfruto resolver problemas complejos, optimizar sistemas existentes y colaborar con equipos multidisciplinarios para entregar",
+    "second_p_highlight": "soluciones de alta calidad",
+    "second_p_finish": "que generen impacto real en el negocio.",
+    "third_p": "Actualmente estoy abierto a nuevas oportunidades remotas donde pueda seguir creciendo como ingeniero de software y contribuir al desarrollo de productos innovadores que marquen la diferencia."
   }
 }

@@ -20,8 +20,8 @@
   "badge": { "message": "Open to work" },
   "hero": {
     "greet": "Hey, I'm Cristian!",
-    "charge": "Civil engineer and software developer",
-    "presentation": "with 3+ years of experience as a programmer. Focused on developing high-performance software following international guidelines for creating maintainable, extensible and clean code."
+    "charge": "Software developer",
+    "presentation": "with 3+ years of experience building web and mobile applications for startups and international companies using Next.js, Node.js, NestJS, and AWS. I specialize in turning complex problems into reliable, maintainable, and high-impact products."
   },
   "pill": {
     "contact": "Contact",
@@ -56,12 +56,12 @@
   },
   "linkButton": { "code": "Code", "preview": "Preview" },
   "about": {
-    "first_p": "Hi, I'm Cristian! My passion for programming began at the age of 11, when I started developing on a Compaq using Visual Basic and Visual C++. I studied civil engineering and worked in that field, but eventually, I rediscovered programming, a world I haven't left since. I am currently actively seeking new job opportunities that will allow me to continue growing as a developer.",
-    "second_p_init": "Among my achievements, I highlight the",
-    "second_p_first_achievement": "optimization of development processes",
-    "second_p_middle": "through effective task and time management, ensuring the timely delivery of solutions. Additionally, I have contributed to the",
-    "second_p_second_achievement": "development of ERP software and mobile applications",
-    "second_p_finish": "for companies across various industries, helping improve their production and quality metrics.",
-    "third_p": "My goal is to positively transform the way we live through software development, leveraging my skills and knowledge to tackle bigger challenges and create innovative solutions that make a difference."
+    "first_p_init": "I'm a Full Stack Developer focused on",
+    "first_p_highlight": "building scalable applications",
+    "first_p_finish": "using modern JavaScript technologies. Throughout my career, I've worked on products used by thousands of users, developing everything from web and mobile interfaces to APIs, microservices, and cloud infrastructure. My experience includes Stripe payment integrations, event-driven architectures, asynchronous processing, AWS, Docker, and AI-assisted development workflows.",
+    "second_p_init": "I enjoy solving complex problems, optimizing existing systems, and collaborating with cross-functional teams to deliver",
+    "second_p_highlight": "high-quality solutions",
+    "second_p_finish": "that create real business impact.",
+    "third_p": "I'm currently open to remote opportunities where I can continue growing as a software engineer and contribute to innovative products that make a difference."
   }
 }
